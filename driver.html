@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>لوحة السائق</title>
+	<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+	<div class="container">
+		<header class="header">
+			<div class="brand"><a href="index.html" style="text-decoration:none; color:inherit;">🚗 منصة الرحلات</a></div>
+			<nav class="nav-actions">
+				<button id="logout-btn" class="button secondary">تسجيل الخروج</button>
+			</nav>
+		</header>
+
+		<div class="grid">
+			<div class="card">
+				<h2>إنشاء رحلة جديدة</h2>
+				<form id="create-trip-form" class="form" style="margin-top:10px;">
+					<div class="field">
+						<label class="label">الانطلاق من</label>
+						<input class="input" type="text" name="from" required />
+					</div>
+					<div class="field">
+						<label class="label">إلى</label>
+						<input class="input" type="text" name="to" required />
+					</div>
+					<div class="field">
+						<label class="label">التاريخ</label>
+						<input class="input" type="date" name="date" required />
+					</div>
+					<div class="field">
+						<label class="label">الوقت</label>
+						<input class="input" type="time" name="time" required />
+					</div>
+					<div class="field">
+						<label class="label">السعر (ريال)</label>
+						<input class="input" type="number" name="price" min="0" step="1" required />
+					</div>
+					<div class="field">
+						<label class="label">المقاعد المتاحة</label>
+						<input class="input" type="number" name="seats" min="1" step="1" required />
+					</div>
+					<div>
+						<button type="submit" class="button">إنشاء الرحلة</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="card">
+				<h2>رحلاتي</h2>
+				<div id="my-trips-list" class="list" style="margin-top:10px;"></div>
+			</div>
+		</div>
+
+		<div class="footer">© <span id="year"></span> منصة الرحلات</div>
+	</div>
+
+	<script src="js/app.js"></script>
+	<script src="js/driver.js"></script>
+	<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

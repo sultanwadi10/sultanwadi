@@ -1,0 +1,120 @@
+/* Reset and base */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+	margin: 0;
+	font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+	background: #f7f7fb;
+	color: #222;
+	direction: rtl;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 24px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+.brand {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.nav-actions {
+	display: flex;
+	gap: 8px;
+}
+
+.card {
+	background: #fff;
+	border: 1px solid #e9e9ef;
+	border-radius: 12px;
+	padding: 20px;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.grid {
+	display: grid;
+	gap: 16px;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+h1, h2, h3 {
+	margin: 0 0 12px 0;
+}
+
+p { margin: 0 0 10px 0; }
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 10px 16px;
+	border-radius: 10px;
+	border: 1px solid transparent;
+	background: #2d6cdf;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background 0.2s ease, box-shadow 0.2s ease;
+	font-weight: 600;
+}
+.button.secondary { background: #f0f3ff; color: #2d6cdf; border-color: #cdd8ff; }
+.button.ghost { background: #fff; color: #2d6cdf; border-color: #d7e3ff; }
+.button:hover { box-shadow: 0 4px 10px rgba(45,108,223,0.25); }
+.button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.tabs {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 12px;
+}
+.tab {
+	padding: 10px 14px;
+	border: 1px solid #e3e6ef;
+	border-radius: 10px;
+	background: #fff;
+	cursor: pointer;
+	font-weight: 600;
+}
+.tab.active { background: #2d6cdf; color: #fff; border-color: #2d6cdf; }
+
+.form {
+	display: grid;
+	gap: 10px;
+}
+
+.field {
+	display: grid;
+	gap: 6px;
+}
+.label { font-weight: 600; }
+.input, .select, .textarea {
+	padding: 10px 12px;
+	border: 1px solid #dfe3ec;
+	border-radius: 10px;
+	background: #fff;
+}
+
+.section {
+	margin: 16px 0;
+}
+
+.trip-item {
+	display: grid;
+	gap: 10px;
+}
+.trip-meta { color: #555; font-size: 14px; }
+
+.list { display: grid; gap: 12px; }
+
+.footer { margin-top: 24px; color: #777; font-size: 14px; text-align: center; }
