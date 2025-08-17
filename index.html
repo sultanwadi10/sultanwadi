@@ -1,40 +1,45 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    
-  </head>
-  <body>   
-          <table>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>S</th>
-                <th>M</th>
-                <th>T</th>
-                <th>W</th>
-                <th>T</th>
-                <th>F</th>
-                <th>S</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Ali</td>
-                <td>colspan="2"</td>
-                <td>Counter</td>
-                <td>Shelfs</td>
-                <td>Store</td>
-                <td>rowspan="2"</td>
-                <td>Gate</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Omar</td>
-                <td>Counter</td>
-                <td>Shelfs</td>
-                <td>colspan="2"</td>
-                <td>Gate</td>
-                <td>Store</td>  
-            </tr>   
-          </table>
-  </body>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>اختيار الدور - راكب أم سائق</title>
+	<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+	<div class="container">
+		<header class="header">
+			<div class="brand">🚗 منصة الرحلات</div>
+			<nav class="nav-actions">
+				<a class="button ghost" href="passenger-auth.html">تسجيل راكب</a>
+				<a class="button ghost" href="driver-auth.html">تسجيل سائق</a>
+			</nav>
+		</header>
+
+		<div class="card">
+			<h1>من أنت؟</h1>
+			<p>اختر الدور للمتابعة.</p>
+			<div class="section grid" style="margin-top: 16px;">
+				<a class="card" style="text-decoration:none;" href="passenger-auth.html">
+					<h2>راكب</h2>
+					<p>استعرض الرحلات المتاحة واحجز رحلتك بسهولة.</p>
+					<div style="margin-top: 10px;"><span class="button">أنا راكب</span></div>
+				</a>
+				<a class="card" style="text-decoration:none;" href="driver-auth.html">
+					<h2>سائق</h2>
+					<p>أنشئ رحلات وانشرها للمسافرين.</p>
+					<div style="margin-top: 10px;"><span class="button">أنا سائق</span></div>
+				</a>
+			</div>
+		</div>
+
+		<div class="footer">© <span id="year"></span> منصة الرحلات</div>
+	</div>
+
+	<script src="js/app.js"></script>
+	<script>
+		// Minimal footer year update
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
+</body>
 </html>

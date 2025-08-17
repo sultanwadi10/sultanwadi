@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>السائق - تسجيل الدخول / إنشاء حساب</title>
+	<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-role="driver">
+	<div class="container">
+		<header class="header">
+			<div class="brand"><a href="index.html" style="text-decoration:none; color:inherit;">🚗 منصة الرحلات</a></div>
+			<nav class="nav-actions">
+				<a class="button ghost" href="passenger-auth.html">أنا راكب</a>
+			</nav>
+		</header>
+
+		<div class="card">
+			<h1>مرحبا بك أيها السائق</h1>
+			<div class="tabs">
+				<button id="tab-login" class="tab">تسجيل الدخول</button>
+				<button id="tab-signup" class="tab">إنشاء حساب</button>
+			</div>
+
+			<div id="view-login" class="section">
+				<form id="login-form" class="form">
+					<div class="field">
+						<label class="label">البريد الإلكتروني</label>
+						<input class="input" type="email" name="email" required />
+					</div>
+					<div class="field">
+						<label class="label">كلمة المرور</label>
+						<input class="input" type="password" name="password" required />
+					</div>
+					<div>
+						<button type="submit" class="button">دخول</button>
+					</div>
+				</form>
+			</div>
+
+			<div id="view-signup" class="section" style="display:none;">
+				<form id="signup-form" class="form">
+					<div class="field">
+						<label class="label">الاسم الكامل</label>
+						<input class="input" type="text" name="fullName" required />
+					</div>
+					<div class="field">
+						<label class="label">البريد الإلكتروني</label>
+						<input class="input" type="email" name="email" required />
+					</div>
+					<div class="field">
+						<label class="label">رقم الجوال</label>
+						<input class="input" type="tel" name="phone" required />
+					</div>
+					<div class="field">
+						<label class="label">كلمة المرور</label>
+						<input class="input" type="password" name="password" required />
+					</div>
+					<div class="field">
+						<label class="label">تأكيد كلمة المرور</label>
+						<input class="input" type="password" name="confirmPassword" required />
+					</div>
+					<div>
+						<button type="submit" class="button">إنشاء الحساب</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="footer">© <span id="year"></span> منصة الرحلات</div>
+	</div>
+
+	<script src="js/app.js"></script>
+	<script src="js/auth.js"></script>
+	<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
